@@ -1,0 +1,14 @@
+{
+  "services": [
+    {
+        "id": "mongodb",
+        "name": "mongodb",
+        "tags": [],
+        "port": 27017,
+        "checks": [{
+            "script": "nmap 127.0.0.1 -PN -p 27017 | grep open",
+            "interval": "10s"
+        }]
+    }
+  ]
+}
