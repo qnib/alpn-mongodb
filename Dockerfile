@@ -1,4 +1,4 @@
-FROM qnib/alpn-consul
+FROM qnib/alpn-rsyslog
 
 ENV MONGODB_VER=3.2.8 \
     PATH=${PATH}:/opt/mongodb/bin/
