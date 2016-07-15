@@ -4,6 +4,8 @@ ENV MONGODB_VER=3.2.8 \
     PATH=${PATH}:/opt/mongodb/bin/
 RUN apk add --update curl tar openssl \
  && mkdir -p /opt/ \
+ && echo "No musl-version yet" \
+ && exit 1 \
  && curl -fsL https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-${MONGODB_VER}.tgz |tar xfz - -C /opt/ \
  && mv  /opt/mongodb-linux-x86_64-${MONGODB_VER} /opt/mongodb/ \
  && mkdir -p /data/db/
